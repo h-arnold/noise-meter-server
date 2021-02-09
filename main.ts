@@ -4,18 +4,19 @@ radio.onReceivedNumber(function (receivedNumber) {
     receivedNumber,
     256
     )
+    basic.pause(500)
+    basic.clearScreen()
 })
 input.onButtonPressed(Button.A, function () {
     Sending = true
     while (Sending == true) {
         radio.sendNumber(input.soundLevel())
+        basic.showIcon(IconNames.Yes)
+        basic.pause(100)
+        basic.clearScreen()
     }
-    basic.clearScreen()
 })
 input.onButtonPressed(Button.B, function () {
     Sending = false
     basic.showIcon(IconNames.No)
-})
-basic.forever(function () {
-	
 })
