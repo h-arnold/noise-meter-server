@@ -1,12 +1,4 @@
 let Sending = false
-radio.onReceivedNumber(function (receivedNumber) {
-    led.plotBarGraph(
-    receivedNumber,
-    256
-    )
-    basic.pause(500)
-    basic.clearScreen()
-})
 input.onButtonPressed(Button.A, function () {
     radio.setGroup(90)
     Sending = true
