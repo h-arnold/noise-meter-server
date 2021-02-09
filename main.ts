@@ -8,6 +8,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     basic.clearScreen()
 })
 input.onButtonPressed(Button.A, function () {
+    radio.setGroup(90)
     Sending = true
     while (Sending == true) {
         radio.sendNumber(input.soundLevel())
